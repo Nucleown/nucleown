@@ -171,8 +171,7 @@ function V2Hero() {
 
         <h1 className="mt-8 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
           Websites that look{" "}
-          <span className="v2-text-gradient">unreal</em></span>
-          .{" "}
+          <span className="v2-text-gradient">unreal</span>.{" "}
           <br className="hidden sm:block" />
           Built to actually convert.
         </h1>
