@@ -209,6 +209,7 @@ function V5Page() {
 
       <style>{`
         @keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+        .font-serif { font-family: 'Playfair Display', ui-serif, Georgia, serif; }
       `}</style>
     </div>
   );
