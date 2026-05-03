@@ -45,7 +45,7 @@ export function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -53,6 +53,16 @@ export function Navbar() {
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {l.label}
+            </a>
+          ))}
+          <span className="h-4 w-px bg-border" />
+          {versions.map((v) => (
+            <a
+              key={v.href}
+              href={v.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {v.label}
             </a>
           ))}
         </nav>
