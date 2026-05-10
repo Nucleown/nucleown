@@ -86,17 +86,6 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <div className="my-2 border-t border-border/60" />
-            {versions.map((v) => (
-              <a
-                key={v.href}
-                href={v.href}
-                onClick={() => setOpen(false)}
-                className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
-              >
-                {v.label}
-              </a>
-            ))}
             <Button asChild className="mt-2 w-full">
               <a href="#contact" onClick={() => setOpen(false)}>
                 Get a Free Quote
