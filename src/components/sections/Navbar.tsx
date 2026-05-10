@@ -11,13 +11,6 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
-const versions = [
-  { href: "/v2", label: "V2 · Glass" },
-  { href: "/v3", label: "V3 · Skeuo" },
-  { href: "/v4", label: "V4 · Brutal" },
-  { href: "/v5", label: "V5 · Atelier" },
-];
-
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
