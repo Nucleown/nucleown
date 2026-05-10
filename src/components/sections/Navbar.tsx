@@ -11,13 +11,6 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
-const versions = [
-  { href: "/v2", label: "V2 · Glass" },
-  { href: "/v3", label: "V3 · Skeuo" },
-  { href: "/v4", label: "V4 · Brutal" },
-  { href: "/v5", label: "V5 · Atelier" },
-];
-
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -56,16 +49,6 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
-          <span className="h-4 w-px bg-border" />
-          {versions.map((v) => (
-            <a
-              key={v.href}
-              href={v.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {v.label}
-            </a>
-          ))}
         </nav>
 
         <div className="hidden md:block">
@@ -94,17 +77,6 @@ export function Navbar() {
                 className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
               >
                 {l.label}
-              </a>
-            ))}
-            <div className="my-2 border-t border-border/60" />
-            {versions.map((v) => (
-              <a
-                key={v.href}
-                href={v.href}
-                onClick={() => setOpen(false)}
-                className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
-              >
-                {v.label}
               </a>
             ))}
             <Button asChild className="mt-2 w-full">
