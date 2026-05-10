@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/nucleown-logo.png";
 
 const links = [
+  { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
-  { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
+  { href: "#insights", label: "Insights" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -31,30 +31,33 @@ export function Navbar() {
           : "bg-transparent",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Nucleown Technologies" className="h-9 w-9 rounded-full" />
-          <span className="font-display text-lg font-semibold tracking-tight">
-            nucleown
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#home" className="flex items-center gap-2">
+          <span className="grid h-8 w-8 place-items-center rounded-full bg-deep text-primary-foreground">
+            <span className="block h-2 w-2 rounded-full bg-lime" />
           </span>
+          <span className="font-display text-2xl text-foreground">Nucleown</span>
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button asChild className="shadow-glow">
-            <a href="#contact">Get a Free Quote</a>
-          </Button>
+        <div className="hidden md:flex md:items-center md:gap-3">
+          <button
+            aria-label="Search"
+            className="grid h-10 w-10 place-items-center rounded-full bg-deep text-primary-foreground transition hover:opacity-90"
+          >
+            <Search className="h-4 w-4" />
+          </button>
         </div>
 
         <button
@@ -74,16 +77,11 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
               </a>
             ))}
-            <Button asChild className="mt-2 w-full">
-              <a href="#contact" onClick={() => setOpen(false)}>
-                Get a Free Quote
-              </a>
-            </Button>
           </div>
         </div>
       )}
