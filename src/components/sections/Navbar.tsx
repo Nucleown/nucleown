@@ -56,16 +56,6 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
-          <span className="h-4 w-px bg-border" />
-          {versions.map((v) => (
-            <a
-              key={v.href}
-              href={v.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {v.label}
-            </a>
-          ))}
         </nav>
 
         <div className="hidden md:block">
