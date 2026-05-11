@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/nucleown-logo.png";
 
 const links = [
   { href: "#home", label: "Home" },
