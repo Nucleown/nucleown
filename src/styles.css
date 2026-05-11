@@ -47,12 +47,12 @@
 :root {
   --radius: 1.25rem;
 
-  /* Brand — Finovate-inspired green editorial */
-  --brand-cream: oklch(0.985 0.012 95);     /* page bg */
-  --brand-deep: oklch(0.32 0.06 155);       /* deep forest green sections */
-  --brand-forest: oklch(0.42 0.09 155);     /* mid green */
-  --brand-lime: oklch(0.86 0.19 125);       /* lime accent */
-  --brand-ink: oklch(0.18 0.02 150);        /* near-black text */
+  /* Brand — Nucleown teal on light */
+  --brand-cream: oklch(0.985 0.004 220);    /* page bg — soft white */
+  --brand-deep: oklch(0.34 0.07 220);       /* deep teal (logo) */
+  --brand-forest: oklch(0.46 0.09 220);     /* mid teal */
+  --brand-lime: oklch(0.78 0.13 215);       /* bright cyan accent */
+  --brand-ink: oklch(0.20 0.03 230);        /* near-black text */
 
   --background: var(--brand-cream);
   --foreground: var(--brand-ink);
