@@ -51,6 +51,7 @@ const IMG = {
 };
 
 function Index() {
+  useReveal();
   return (
     <div id="home" className="min-h-screen bg-background text-foreground">
       <Navbar />
