@@ -80,7 +80,7 @@ function Index() {
 /* ---------------- HERO ---------------- */
 function Hero() {
   return (
-    <section data-reveal className="relative pt-28 pb-12 sm:pt-32">
+    <section className="relative pt-28 pb-12 sm:pt-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <h1 className="max-w-3xl text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
