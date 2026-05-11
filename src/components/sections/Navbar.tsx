@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/nucleown-logo.png";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -32,10 +33,8 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-deep text-primary-foreground">
-            <span className="block h-2 w-2 rounded-full bg-lime" />
-          </span>
+        <a href="#home" className="flex items-center gap-2.5">
+          <img src={logo} alt="Nucleown Technologies" className="h-9 w-9 rounded-full object-cover" />
           <span className="font-display text-2xl text-foreground">Nucleown</span>
         </a>
 

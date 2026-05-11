@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/nucleown-logo.png";
 
 export function Footer() {
   return (
@@ -6,10 +7,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-lime">
-                <span className="block h-2 w-2 rounded-full bg-deep" />
-              </span>
+            <div className="flex items-center gap-2.5">
+              <img src={logo} alt="Nucleown Technologies" className="h-9 w-9 rounded-full bg-primary-foreground/10 object-cover" />
               <span className="font-display text-2xl">Nucleown</span>
             </div>
             <p className="mt-4 max-w-md text-sm text-primary-foreground/70">

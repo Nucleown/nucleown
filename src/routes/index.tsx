@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppFAB } from "@/components/sections/WhatsAppFAB";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,6 +51,7 @@ const IMG = {
 };
 
 function Index() {
+  useReveal();
   return (
     <div id="home" className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -165,7 +167,7 @@ function StatChip({
 /* ---------------- FOUNDERS ---------------- */
 function Founders() {
   return (
-    <section className="py-20 sm:py-24">
+    <section data-reveal className="py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
         <h2 className="text-4xl leading-tight sm:text-5xl">
           Founded by Designers
@@ -193,7 +195,7 @@ function Services() {
     { title: "E-Commerce & SEO", img: IMG.service3, desc: "Stores that sell and pages that rank. We handle both." },
   ];
   return (
-    <section id="services" className="bg-deep py-20 text-primary-foreground sm:py-28">
+    <section data-reveal id="services" className="bg-deep py-20 text-primary-foreground sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <h2 className="max-w-2xl text-4xl leading-tight sm:text-5xl">
@@ -252,7 +254,7 @@ function Values() {
     { title: "Expertise", icon: Wrench, desc: "Battle-tested craft across design, code, content and SEO." },
   ];
   return (
-    <section className="py-20 sm:py-28">
+    <section data-reveal className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mx-auto max-w-3xl text-4xl leading-tight sm:text-5xl">
           We Listen, <span className="italic text-lime-accent">Think Independently</span>,
@@ -290,7 +292,7 @@ function Values() {
 /* ---------------- PRICING ---------------- */
 function Pricing() {
   return (
-    <section id="about" className="pb-20 sm:pb-28">
+    <section data-reveal id="about" className="pb-20 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl">
           <img src={IMG.pricing} alt="Transparent pricing meeting" className="h-[480px] w-full object-cover sm:h-[520px]" loading="lazy" />
@@ -330,7 +332,7 @@ function Team() {
     { name: "Daniyal Pervaiz", role: "SEO & Performance", img: IMG.team4 },
   ];
   return (
-    <section className="pb-20 sm:pb-28">
+    <section data-reveal className="pb-20 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="max-w-2xl text-4xl leading-tight sm:text-5xl">
@@ -375,7 +377,7 @@ function Team() {
 /* ---------------- CERTIFIED ---------------- */
 function Certified() {
   return (
-    <section className="pb-20 sm:pb-28">
+    <section data-reveal className="pb-20 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-5 lg:grid-cols-5">
           <div className="overflow-hidden rounded-3xl lg:col-span-3">
@@ -422,7 +424,7 @@ function Testimonials() {
   const [i, setI] = useState(0);
   const t = quotes[i];
   return (
-    <section id="testimonials" className="pb-20 sm:pb-28">
+    <section data-reveal id="testimonials" className="pb-20 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
@@ -480,7 +482,7 @@ function Testimonials() {
 function BrandStrip() {
   const brands = ["Linkfeed", "Nytcox", "Stemic Bank", "Quadrolean", "Helo Pay"];
   return (
-    <section className="border-y border-border bg-secondary/40 py-8">
+    <section data-reveal className="border-y border-border bg-secondary/40 py-8">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground sm:px-6 lg:px-8">
         {brands.map((b) => (
           <span key={b} className="font-display text-base normal-case tracking-tight text-foreground/70">
@@ -513,7 +515,7 @@ function Insights() {
     },
   ];
   return (
-    <section id="insights" className="py-20 sm:py-28">
+    <section data-reveal id="insights" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="max-w-xl text-4xl leading-tight sm:text-5xl">
@@ -562,7 +564,7 @@ function FAQ() {
   ];
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="pb-20 sm:pb-28">
+    <section data-reveal className="pb-20 sm:pb-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
         <div>
           <h2 className="text-4xl leading-tight sm:text-5xl">
@@ -609,7 +611,7 @@ function FAQ() {
 function Newsletter() {
   const [email, setEmail] = useState("");
   return (
-    <section className="pb-20">
+    <section data-reveal className="pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 rounded-3xl bg-deep p-8 text-primary-foreground md:grid-cols-2 md:items-center md:p-12">
           <div>
@@ -652,7 +654,7 @@ function Newsletter() {
 function CTA() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   return (
-    <section id="contact" className="pb-24">
+    <section data-reveal id="contact" className="pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 overflow-hidden rounded-3xl bg-card shadow-soft md:grid-cols-2">
           <div className="relative">
