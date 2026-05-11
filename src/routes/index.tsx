@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppFAB } from "@/components/sections/WhatsAppFAB";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
   component: Index,
