@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/nucleown-logo.png";
 
 export function Footer() {
   return (
