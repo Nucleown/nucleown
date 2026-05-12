@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Check, Star, Plus, Minus, BadgeCheck, Quote, Sparkles, Eye, Compass, Wrench } from "lucide-react";
+import { ArrowUpRight, ArrowLeft, ArrowRight, Check, Star, Plus, Minus, BadgeCheck, Quote, Sparkles, Eye, Compass, Wrench } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
