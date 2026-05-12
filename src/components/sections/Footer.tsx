@@ -22,10 +22,10 @@ export function Footer() {
               Contact Us
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/85">
-              <li>Your Phone</li>
+              <li>Phone</li>
               <li className="text-primary-foreground">+92 312 4344746</li>
-              <li>Your Email</li>
-              <li className="text-primary-foreground">hello@nucleown.com</li>
+              <li>Email</li>
+              <li className="text-primary-foreground">msaadvirkofficial@outlook.com</li>
             </ul>
           </div>
 
@@ -34,7 +34,8 @@ export function Footer() {
               Visit Us
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/85">
-              <li>Lahore, Pakistan</li>
+              <li className="text-primary-foreground">Al Rehman Garden, Lahore</li>
+              <li>Pakistan 54950</li>
               <li>Working Globally 🌍</li>
             </ul>
             <div className="mt-6 flex gap-3">
