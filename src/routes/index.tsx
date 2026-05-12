@@ -503,15 +503,21 @@ function Testimonials() {
 
 /* ---------------- BRAND STRIP ---------------- */
 function BrandStrip() {
-  const brands = ["Linkfeed", "Nytcox", "Stemic Bank", "Quadrolean", "Helo Pay"];
+  const brands = ["Linkfeed", "Nytcox", "Stemic Bank", "Quadrolean", "Helo Pay", "Brewline", "Reza Studio", "Fareen Foods"];
+  const loop = [...brands, ...brands];
   return (
     <section data-reveal className="border-y border-border bg-secondary/40 py-8">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground sm:px-6 lg:px-8">
-        {brands.map((b) => (
-          <span key={b} className="font-display text-base normal-case tracking-tight text-foreground/70">
-            {b}
-          </span>
-        ))}
+      <div className="marquee-mask overflow-hidden">
+        <div className="marquee-track gap-12 px-6">
+          {loop.map((b, idx) => (
+            <span
+              key={`${b}-${idx}`}
+              className="font-display text-base whitespace-nowrap tracking-tight text-foreground/70"
+            >
+              {b}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
