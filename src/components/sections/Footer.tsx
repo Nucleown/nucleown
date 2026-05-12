@@ -5,13 +5,13 @@ export function Footer() {
   return (
     <footer className="bg-deep text-primary-foreground">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+        <div className="grid gap-10 sm:grid-cols-3 sm:gap-8 lg:gap-12">
+          <div>
             <div className="flex items-center gap-2.5">
               <img src={logo} alt="Nucleown Technologies" className="h-9 w-9 rounded-full bg-primary-foreground/10 object-cover" />
               <span className="font-display text-2xl">Nucleown</span>
             </div>
-            <p className="mt-4 max-w-md text-sm text-primary-foreground/70">
+            <p className="mt-4 text-sm text-primary-foreground/70">
               We design and build websites that turn visitors into customers.
               Pakistan-based, working globally.
             </p>
