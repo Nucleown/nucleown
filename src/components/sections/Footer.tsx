@@ -23,7 +23,7 @@ export function Footer() {
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/85">
               <li>Your Phone</li>
-              <li className="text-primary-foreground">+92 300 0000 000</li>
+              <li className="text-primary-foreground">+92 312 4344746</li>
               <li>Your Email</li>
               <li className="text-primary-foreground">hello@nucleown.com</li>
             </ul>
