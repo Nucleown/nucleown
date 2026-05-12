@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Check, Star, Plus, Minus, BadgeCheck, Quote, Sparkles, Eye, Compass, Wrench } from "lucide-react";
+import { ArrowUpRight, ArrowLeft, ArrowRight, Check, Star, Plus, Minus, BadgeCheck, Quote, Sparkles, Eye, Compass, Wrench } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -145,15 +145,15 @@ function StatChip({
 }) {
   return (
     <div
-      className={`rounded-2xl bg-cream/95 backdrop-blur px-4 ${small ? "py-2.5" : "py-3"} shadow-soft`}
+      className={`rounded-2xl bg-cream px-4 ${small ? "py-2.5" : "py-3"} shadow-soft ring-1 ring-deep/10`}
     >
-      <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+      <div className="text-[10px] font-semibold uppercase tracking-widest text-deep/70">
         {label}
       </div>
-      <div className={`font-display ${small ? "text-lg" : "text-2xl"} text-foreground`}>
+      <div className={`font-display ${small ? "text-lg" : "text-2xl"} text-deep`}>
         {value}
       </div>
-      <div className="text-[10px] text-muted-foreground">{sub}</div>
+      <div className="text-[10px] text-deep/60">{sub}</div>
     </div>
   );
 }
@@ -416,7 +416,13 @@ function Testimonials() {
     { name: "Adeel Khan", role: "CEO, Fareen Foods", quote: "From discovery to launch, the team kept us informed and made smart decisions on our behalf. A true partner." },
   ];
   const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((p) => (p + 1) % quotes.length), 6000);
+    return () => clearInterval(id);
+  }, [quotes.length]);
   const t = quotes[i];
+  const prev = () => setI((p) => (p - 1 + quotes.length) % quotes.length);
+  const next = () => setI((p) => (p + 1) % quotes.length);
   return (
     <section data-reveal id="testimonials" className="pb-20 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -434,11 +440,16 @@ function Testimonials() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-card p-8 shadow-soft sm:p-10">
+          <div className="relative rounded-3xl bg-card p-8 shadow-soft sm:p-10">
             <Quote className="h-8 w-8 text-lime-accent" />
-            <p className="mt-4 font-display text-2xl leading-snug text-foreground sm:text-3xl">
-              "{t.quote}"
-            </p>
+            <div className="mt-4 overflow-hidden">
+              <p
+                key={i}
+                className="font-display text-2xl leading-snug text-foreground sm:text-3xl animate-fade-in"
+              >
+                "{t.quote}"
+              </p>
+            </div>
             <div className="mt-6 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-full bg-deep text-primary-foreground font-display">
@@ -455,15 +466,33 @@ function Testimonials() {
                 ))}
               </div>
             </div>
-            <div className="mt-6 flex gap-2">
-              {quotes.map((_, k) => (
+            <div className="mt-6 flex items-center justify-between">
+              <div className="flex gap-2">
+                {quotes.map((_, k) => (
+                  <button
+                    key={k}
+                    onClick={() => setI(k)}
+                    aria-label={`Show testimonial ${k + 1}`}
+                    className={`h-2 rounded-full transition-all ${k === i ? "w-8 bg-deep" : "w-2 bg-border"}`}
+                  />
+                ))}
+              </div>
+              <div className="flex gap-2">
                 <button
-                  key={k}
-                  onClick={() => setI(k)}
-                  aria-label={`Show testimonial ${k + 1}`}
-                  className={`h-2 rounded-full transition-all ${k === i ? "w-8 bg-deep" : "w-2 bg-border"}`}
-                />
-              ))}
+                  onClick={prev}
+                  aria-label="Previous testimonial"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-border text-deep transition hover:bg-secondary"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={next}
+                  aria-label="Next testimonial"
+                  className="grid h-9 w-9 place-items-center rounded-full bg-deep text-primary-foreground transition hover:opacity-90"
+                >
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -474,15 +503,21 @@ function Testimonials() {
 
 /* ---------------- BRAND STRIP ---------------- */
 function BrandStrip() {
-  const brands = ["Linkfeed", "Nytcox", "Stemic Bank", "Quadrolean", "Helo Pay"];
+  const brands = ["Linkfeed", "Nytcox", "Stemic Bank", "Quadrolean", "Helo Pay", "Brewline", "Reza Studio", "Fareen Foods"];
+  const loop = [...brands, ...brands];
   return (
     <section data-reveal className="border-y border-border bg-secondary/40 py-8">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6 px-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground sm:px-6 lg:px-8">
-        {brands.map((b) => (
-          <span key={b} className="font-display text-base normal-case tracking-tight text-foreground/70">
-            {b}
-          </span>
-        ))}
+      <div className="marquee-mask overflow-hidden">
+        <div className="marquee-track gap-12 px-6">
+          {loop.map((b, idx) => (
+            <span
+              key={`${b}-${idx}`}
+              className="font-display text-base whitespace-nowrap tracking-tight text-foreground/70"
+            >
+              {b}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
