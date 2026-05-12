@@ -145,15 +145,15 @@ function StatChip({
 }) {
   return (
     <div
-      className={`rounded-2xl bg-cream/95 backdrop-blur px-4 ${small ? "py-2.5" : "py-3"} shadow-soft`}
+      className={`rounded-2xl bg-cream px-4 ${small ? "py-2.5" : "py-3"} shadow-soft ring-1 ring-deep/10`}
     >
-      <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+      <div className="text-[10px] font-semibold uppercase tracking-widest text-deep/70">
         {label}
       </div>
-      <div className={`font-display ${small ? "text-lg" : "text-2xl"} text-foreground`}>
+      <div className={`font-display ${small ? "text-lg" : "text-2xl"} text-deep`}>
         {value}
       </div>
-      <div className="text-[10px] text-muted-foreground">{sub}</div>
+      <div className="text-[10px] text-deep/60">{sub}</div>
     </div>
   );
 }
