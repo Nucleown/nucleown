@@ -116,13 +116,7 @@ function Hero() {
           {/* Stat chips overlay */}
           <div className="absolute inset-x-0 bottom-0 hidden flex-wrap items-end justify-between gap-3 p-6 sm:flex">
             <StatChip label="Projects" value="$28.5M" sub="Impact delivered" />
-            <div className="hidden h-32 w-44 overflow-hidden rounded-2xl ring-2 ring-cream sm:block">
-              <img src={IMG.heroLeaf} alt="" className="h-full w-full object-cover" />
-            </div>
             <StatChip label="Happy Clients" value="120+" sub="Globally" />
-            <div className="hidden h-32 w-44 overflow-hidden rounded-2xl ring-2 ring-cream lg:block">
-              <img src={IMG.heroCity} alt="" className="h-full w-full object-cover" />
-            </div>
             <StatChip label="Founded" value="2024" sub="Lahore, PK" />
           </div>
         </div>
