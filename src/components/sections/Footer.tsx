@@ -12,8 +12,7 @@ export function Footer() {
               <span className="font-display text-2xl">Nucleown</span>
             </div>
             <p className="mt-4 text-sm text-primary-foreground/70">
-              We design and build websites that turn visitors into customers.
-              Pakistan-based, working globally.
+              A basis for all your digital needs. Custom websites built to mean business — fast, clean, built to convert.
             </p>
           </div>
 
