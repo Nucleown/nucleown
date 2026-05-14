@@ -55,8 +55,8 @@ export const Route = createRootRoute({
       { name: "description", content: "Builds professional, high-converting agency websites for web design and development businesses." },
       { property: "og:description", content: "Builds professional, high-converting agency websites for web design and development businesses." },
       { name: "twitter:description", content: "Builds professional, high-converting agency websites for web design and development businesses." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6d5d6076-ad99-4f7e-89aa-ac0f583fdd38/id-preview-119c9e6a--6f5f11b2-6aed-43e8-98ca-e80afaa12024.lovable.app-1777716789135.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6d5d6076-ad99-4f7e-89aa-ac0f583fdd38/id-preview-119c9e6a--6f5f11b2-6aed-43e8-98ca-e80afaa12024.lovable.app-1777716789135.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/X7BqUkaNJZP3nRqzv79JVCMaFj93/social-images/social-1778799696233-Screenshot_20260511-120909.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/X7BqUkaNJZP3nRqzv79JVCMaFj93/social-images/social-1778799696233-Screenshot_20260511-120909.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
