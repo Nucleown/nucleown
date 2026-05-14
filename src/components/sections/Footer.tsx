@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import logo from "@/assets/nucleown-logo.png";
 
 export function Footer() {
@@ -38,14 +38,11 @@ export function Footer() {
               <li>Working Globally 🌍</li>
             </ul>
             <div className="mt-6 flex gap-3">
-              <a href="#" aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground/10 hover:bg-lime hover:text-deep">
+              <a href="https://www.instagram.com/nucleownofficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground/10 hover:bg-lime hover:text-deep">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground/10 hover:bg-lime hover:text-deep">
+              <a href="https://www.linkedin.com/company/nucleown" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground/10 hover:bg-lime hover:text-deep">
                 <Linkedin className="h-4 w-4" />
-              </a>
-              <a href="#" aria-label="Twitter" className="grid h-9 w-9 place-items-center rounded-full bg-primary-foreground/10 hover:bg-lime hover:text-deep">
-                <Twitter className="h-4 w-4" />
               </a>
             </div>
           </div>
